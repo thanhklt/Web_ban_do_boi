@@ -1,0 +1,241 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --clr-primary: #7380ec;
+    --clr-danger: #ff7782;
+    --clr-success: #41f1b6;
+    --clr-white: #fff;
+    --clr-info-dark: #7d8da1;
+    --clr-info-light: #dce1eb;
+    --clr-dark: #363949;
+    --clr-warning: #ff4edc;
+    --clr-light: rgba(132, 139, 200, 0.18);
+    --clr-primary-variant: #111e88;
+    --clr-dark-variant: #677483;
+    --clr-color-background: #f6f6f9;
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+  
+  }
+  
+  /* dark theme */
+  .dark-theme-variables {
+    --clr-color-background: #181a1e;
+    --clr-white: #202528;
+    --clr-light: rgba(0, 0, 0, 0.4);
+    --clr-dark: #edeffd;
+    --clr-dark-variant: #677483;
+    --box-shadow: 0 2rem 3rem var(--clr-light)
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+  }
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    background-color: var(--clr-color-background);
+}
+
+/* .container{
+  display: grid;
+  width: 96%;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto;
+  margin: 0 auto;
+} */
+
+a{
+  color: (--clr-dark);
+}
+
+h1{
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2{
+  font-size: 1.4rem;
+}
+
+h3{
+  font-size: 0.87rem;
+}
+
+h4{
+  font-size: 0.8rem;
+}
+
+h5{
+  font-size: 0.77rem;
+}
+
+small{
+  font-size: 0.75rem;
+}
+
+.profile-photo{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted{
+  color: var(--clr-info-dark);
+}
+
+p{
+  color: var(--clr-primary-variant);
+}
+
+b{
+  color: var(--clr-dark);
+}
+
+.primary{
+  color: var(--clr-primary);
+}
+.success{
+  color: var(--clr-success);
+}
+.danger{
+  color: var(--clr-danger);
+}
+.warning{
+  color: var(--clr-warning);
+}
+
+
+/*  ASIDE */
+
+aside{
+  top: 0;
+  position: sticky;  /*Thay*/
+  height: 100vh;
+}
+
+aside .top{
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.4rem;
+}
+
+aside .logo{
+  display: flex;
+  gap: 1rem;
+}
+
+.logo img{
+  width: 4rem;
+  height: 2rem;
+}
+
+aside .top div .close{
+  display: none;
+}
+
+/**********SIDEBAR*************/
+
+aside .sidebar{
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  position: relative;
+  top: 1rem;
+}
+
+aside h3{
+  font-weight: 400;
+}
+
+aside .sidebar a{
+  display: flex;
+  color: var(--clr-info-dark);
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  height: 3.2rem;
+  transition: all .1s ease-in;
+}
+
+aside .sidebar a span{
+  font-size: 1.6rem;
+  transition: all .1s ease-in;
+}
+
+aside .sidebar a:last-child{
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+}
+
+aside .sidebar a.active{ /*Test bằng class active*/
+  background: var(--clr-light);
+  color: var(--clr-primary);
+  margin-left: 0;
+  border-left: 5px solid var(--clr-primary);
+}
+
+aside .sidebar a.active::before{
+  content: '';
+  width: 6px;
+  height: 100%;
+  background-color: var(--clr-primary);
+}
+
+/* Thụt vào khi đc hover*/
+aside .sidebar a:hover{
+  color: var(--clr-primary);
+  margin-left: 1rem;
+  transition: .2 ease; /*Delay thoi gian thụt về*/
+}
+
+aside .sidebar a .msg-count{
+  background: var(--clr-danger);
+  color: var(--clr-white);
+  padding: 2px 5px;
+  font-size: 13px;
+  border-radius: var(--border-radius-1);
+
+}
+aside .logo img {
+  width: 7rem;
+  height: 2rem;
+}
+
+aside .top div.close img{
+  display: none;
+}
+/* @media screen and (max-width: 1200px){
+  aside .sidebar h3{
+    display: none;
+  }
+
+  aside  .sidebar a:last-child{
+    position: relative;
+    margin-top: 1.8rem;
+  }
+
+} */

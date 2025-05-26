@@ -1,0 +1,612 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --clr-primary: #7380ec;
+    --clr-danger: #ff7782;
+    --clr-success: #41f1b6;
+    --clr-white: #fff;
+    --clr-info-dark: #7d8da1;
+    --clr-info-light: #dce1eb;
+    --clr-dark: #363949;
+    --clr-warning: #ff4edc;
+    --clr-light: rgba(132, 139, 200, 0.18);
+    --clr-primary-variant: #111e88;
+    --clr-dark-variant: #677483;
+    --clr-color-background: #f6f6f9;
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+  
+  }
+  
+  /* dark theme */
+  .dark-theme-variables {
+    --clr-color-background: #181a1e;
+    --clr-white: #202528;
+    --clr-light: rgba(0, 0, 0, 0.4);
+    --clr-dark: #edeffd;
+    --clr-dark-variant: #677483;
+    --box-shadow: 0 2rem 3rem var(--clr-light)
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+  }
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    background-color: var(--clr-color-background);
+}
+
+.container{
+  display: grid;
+  width: 96%;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 14rem;
+  margin: 0 auto;
+}
+
+a{
+  color: (--clr-dark);
+}
+
+h1{
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2{
+  font-size: 1.4rem;
+}
+
+h3{
+  font-size: 0.87rem;
+}
+
+h4{
+  font-size: 0.8rem;
+}
+
+h5{
+  font-size: 0.77rem;
+}
+
+small{
+  font-size: 0.75rem;
+}
+
+.profile-photo img{ /*Co the dung object-fit: cover*/
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted{
+  color: var(--clr-info-dark);
+}
+
+p{
+  color: var(--clr-primary-variant);
+}
+
+b{
+  color: var(--clr-dark);
+}
+
+.primary{
+  color: var(--clr-primary);
+}
+.success{
+  color: var(--clr-success);
+}
+.danger{
+  color: var(--clr-danger);
+}
+.warning{
+  color: var(--clr-warning);
+}
+
+
+/*  ASIDE */
+
+aside{
+  height: 100vh;
+}
+
+aside .top{
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.4rem;
+}
+
+aside .logo{
+  display: flex;
+  gap: 1rem;
+}
+
+aside .logo img{
+  width: 7rem;
+  height: 2rem;
+}
+
+aside .top div.close img{
+  display: none;
+}
+
+/* Sidebar trong file khac*/
+/*****************
+Start main section style
+******************/
+
+main{
+  margin-top: 1.4rem;
+  width: auto;
+}
+
+main input{
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--clr-dark);
+  background-color: var(--clr-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  /* margin-top: 1rem; */
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+}
+
+main input:hover{
+  box-shadow: none;
+}
+main .date{
+  display: inline-block;
+  background-color: var(--clr-white);
+  border-radius: var(--border-radius-1);
+  margin-top: 1rem;
+  padding: 0.5rem 1.6rem;
+}
+
+main .insights{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.6rem;
+}
+
+main .insights>div{
+  background-color: var(--clr-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+}
+
+main .insights > div:hover{
+  box-shadow: none;
+}
+
+main .insights > div span{
+  background-color: coral;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: var(--clr-white);
+  font-size: 2rem;
+}
+
+main .insights .chi-phi span{ /* Doi mau hinh tron*/
+  background-color: var(--clr-danger);
+}
+
+main .insights .thu-nhap span{ /* Doi mau hinh tron*/
+  background-color: var(--clr-success);
+}
+
+main .insights > div .middle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .insights > div .middle h1{
+  font-size: 1.6rem;
+}
+
+main h1{
+  color: var(--clr-dark);
+}
+
+main .insights h1,h3,p{
+  color: var(--clr-dark);
+}
+
+main .insights .progress{
+  position: relative;
+  height: 68px;
+  width: 68px;
+  border-radius: 50px;
+}
+
+main .insights svg{
+  height: 150px;
+  position: absolute;
+  top: 0;
+}
+
+main .insights svg circle{
+  fill: none;
+  stroke: var(--clr-primary);
+  transform: rotate(270,80,80);
+  stroke-width: 5;  /*Day vien*/
+}
+
+main .insights .doanh-thu svg circle{
+  stroke-dashoffset: 10;
+  stroke-dasharray: 150;
+}
+
+main .insights .chi-phi svg circle{
+  stroke-dashoffset: 0;
+  stroke-dasharray: 150;
+}
+
+main .insights .chi-phi svg circle{
+  stroke: var(--clr-danger);
+}
+main .insights .thu-nhap svg circle{
+  stroke: var(--clr-success);
+}
+
+main .insights .middle .progress .number{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .recent_order{
+  margin-top: 2rem;
+}
+
+main .recent_order h2{  /*Cai chu recent order*/
+  color: var(--clr-dark);
+}
+
+main .recent_order table{
+  background-color: var(--clr-white);
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+  color: var(--clr-dark);
+}
+
+main .recent_order table:hover{
+  box-shadow: none;
+}
+
+main table tbody td{
+  height: 3.8rem;
+  border-bottom: 1px solid var(--clr-dark);
+}
+
+main table tbody .primary{
+  cursor: pointer;
+}
+
+main table tbody tr:last-child td{
+  border: none;
+}
+
+main .recent_order a{
+  text-align: center;
+  display: block;
+  margin: 1rem;
+}
+
+/******Start Right Side******/
+
+.right .top .profile .infor .logo{
+  height: 2rem;
+}
+
+.right{
+  margin-top: 1.4rem;
+}
+
+.right h2{
+  color: var(--clr-dark);
+}
+
+.right .top{
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+.right .top button{
+  display: none;
+}
+
+.right .theme-toggler{
+  font-size: 1.2rem;
+  width: 4.2rem;
+  height: 1.6rem;
+  display: flex;
+  cursor: pointer;
+  justify-content:space-between;
+  background-color: var(--clr-white);
+  border-radius: var(--border-radius-1);
+}
+
+.right .theme-toggler span{
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right .theme-toggler span.active{
+  background-color: var(--clr-primary);
+  color: var(--clr-white)
+}
+
+.right .top .profile{
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+
+.right .infor h3{
+  color: var(--clr-dark);
+}
+
+/* recent update*/
+.right .recent_updates{
+  margin-top: 1rem;
+  margin-left: -20px;
+}
+
+.right .recent_updates .updates{
+  background-color: var(--clr-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+
+  margin: 1.4rem 0;
+}
+
+.right .recent_updates .updates:hover{
+  box-shadow: none;
+}
+
+.right .recent_updates .update{
+  display: grid;
+  grid-template-columns: 2.6rem auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*Sales analytics*/
+
+.rightf .sale_analytics{
+  margin-top: 2rem;
+}
+
+.right .sale_analytics .item-online{
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1;
+  margin: 10px 0;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  padding: 1.4rem var(--card-padding);
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+}
+
+.right .sale_analytics .item-online:hover{
+  box-shadow: none;
+}
+
+.right .sale_analytics .item-online .icon{
+  background-color: coral;
+  padding: 0.6rem;
+  color: var(--clr-white);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  align-items: center;
+}
+
+.right .sale_analytics .item-online .right_text{
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .right .sale_analytics .item-online:nth-child(4) .icon{
+  background-color: var(--clr-danger);
+} */
+
+.right .add-product div{
+  display: flex;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed;
+  color: var(--clr-dark-variant);
+  margin-bottom: 40px;
+}
+
+
+/********************
+  MEDIA QUERY
+********************/
+/*
+TODO: Change the background color for each device
+[lightsalmon] Mobile Devices: 319px — 480px
+[powderblue] iPads and Tablets: 481px — 1200px
+[limegreen] Laptops: 1201px — 1600px
+[seagreen] Desktops: 1601px and more */
+
+@media screen and (max-width: 1200px){
+  .container{
+    width: 94%;
+    grid-template-columns: 7rem auto 14rem;
+  }
+
+  aside .sidebar h3{
+    display: none;
+  }
+
+  aside  .sidebar a:last-child{
+    position: relative;
+    margin-top: 1.8rem;
+  }
+
+  main .insights{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+/* *******************
+  MEDIA QUERY FOR PHONE
+********************/
+
+@media (min-width: 319px) and (max-width: 768px) {
+  .container{
+    width: 100%;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  aside{
+    position: fixed;
+    width: 18rem;
+    z-index: 3;
+    background-color: var(--clr-white);
+  }
+
+  aside .logo h2{
+    display: inline;
+  }
+
+  aside .sidebar h3{
+    display: inline;
+  }
+  aside .sidebar a{
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  aside .top div.close img{
+    display: inline;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    font-size: 35px;
+  }
+
+  .right .top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 0.8rem;
+    background-color: var(--clr-white);
+    z-index: 2;
+    box-shadow: 0 1rem 1 rem var(--clr-white);
+    margin: 0;
+    padding-bottom: 0.5rem;
+  }
+  main .res{
+    display: none;
+  }
+  main .insights{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 1.6rem;
+    padding: 40px;
+  }
+
+  main .recent_order{
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+  .right .top{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10rem;
+  }
+  /* .right .profile{
+    position: absolute;
+    left: 70%;
+  }
+
+  .right .top .theme-toggler{
+    width: 4.4rem;
+    position: absolute;
+    left: 50% */
+
+  .right .recent_updates{
+    padding: 30px;
+  }
+
+  .right .sale_analytics{
+    padding: 30px;
+  }
+  
+  .right .add-product{
+    padding: 30px;
+  }
+
+  .right .top button{
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: var(--clr-dark);
+    position: absolute;
+    left: 1rem;
+  }
+
+}
+
+
+
